@@ -15,9 +15,7 @@ export const ContactsList = () => {
   const { contacts, isLoaging, filter, deleteContact, setFilter } =
     useContacts();
 
-  useEffect(() => {
-    dispatch(contactsOperations.getContacts());
-  }, [dispatch]);
+ 
 
   const findContacts = () => {
     const normalizedFilter = filter.toLowerCase();
@@ -48,7 +46,6 @@ export const ContactsList = () => {
                     onClick={() => {
                       deleteContact(id);
                       deleteToast(`${name} tel:${number} is deleted`);
-                      setFilter('');
                     }}
                   >
                     Delete
