@@ -15,7 +15,9 @@ export const ContactsList = () => {
   const { contacts, isLoaging, filter, deleteContact, setFilter } =
     useContacts();
 
- 
+    useEffect(() => {
+      dispatch(contactsOperations.getContacts());
+    }, [dispatch]);
 
   const findContacts = () => {
     const normalizedFilter = filter.toLowerCase();
