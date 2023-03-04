@@ -12,7 +12,7 @@ export const ContactsList = () => {
   const isLoggedIn = useSelector(authSelectors.getIsLoggedIn);
 
   const dispatch = useDispatch();
-  const { contacts, isLoaging, filter, deleteContact, setFilter } =
+  const { contacts, isLoaging, filter, deleteContact} =
     useContacts();
 
   useEffect(() => {
